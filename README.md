@@ -18,3 +18,19 @@ with dist_lock('test', client):
     print 'welcome to my blog, http://xiaorui.cc'
 
 ```
+#####同时运行test.py and test2.py
+python test.py
+```
+root@li568-252 redis_netlock]# python test.py
+welcome to my blog, http://xiaorui.cc
+```
+
+python test2.py
+```
+[root@li568-252 redis_netlock]# python test2.py
+Sleeipng for 0.404031367603
+Sleeipng for 1.19347232007
+Sleeipng for 2.47668271021
+Sleeipng for 4.55280708824
+hello
+```
