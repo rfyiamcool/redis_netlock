@@ -3,7 +3,7 @@
     ~~~~~~~~~~~~~~
 
     Implements a distributed transaction using redis or
-    a memcached compatible storage.
+    a redis compatible storage.
 
     Example::
 

@@ -16,7 +16,7 @@ def list_files(path):
             yield fn
 
 setup(name='redis_netlock',
-      version = '1.0',
+      version = '1.1',
       author="ruifengyun",
       author_email="rfyiamcool@163.com",
       url="http://xiaorui.cc/",
@@ -34,11 +34,11 @@ setup(name='redis_netlock',
       keywords='redis lock distributed',
       description="一个用redis做的分布式锁，含有超时及重试机制.",
       long_description="""\
-memcached_lock
+redis_netlock
 ---------------
 
-Implements a distributed transaction using memcached or
-a memcached compatible storage.
+Implements a distributed transaction using redis or
+a redis compatible storage.
 
 
 Example
