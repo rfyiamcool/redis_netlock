@@ -1,20 +1,15 @@
 #coding:utf-8
-#!/usr/bin/env python
 
 import os
-
 from setuptools import setup
 
-def list_files(path):
-    for fn in os.listdir(path):
-        if fn.startswith('.'):
-            continue
-        fn = os.path.join(path, fn)
-        if os.path.isfile(fn):
-            yield fn
 
-setup(name='redis_netlock',
-      version = '1.5',
+def read(fname):
+    return open(os.path.join(os.path.dirname(__file__), fname)).read()
+
+setup(
+      name='redis_netlock',
+      version = '1.6',
       author="ruifengyun",
       author_email="rfyiamcool@163.com",
       url="http://xiaorui.cc/",
@@ -26,10 +21,11 @@ setup(name='redis_netlock',
         "Programming Language :: Python",
         "Topic :: Software Development :: Libraries :: Python Modules",
       ],
+      install_requires=['redis'],
       packages=['redis_netlock'],
       platforms=["Any"],
-      license="BSD",
-      keywords='redis lock distributed',
+      license = "MIT",
+      keywords=['redis lock distributed','fengyun'],
       description="一个用redis做的分布式锁，含有超时及重试机制.",
       long_description=open('README.md').read(),
 )
