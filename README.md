@@ -4,6 +4,9 @@
 * timeout避免了避免了任务出现异常，没有做delete操作
 * 对于长时间的业务，增加retry重试锁的次数
 
+更新:
+1. 增加了ask_lock接口
+
 ```
 #coding:utf-8
 #my blog: http://xiaorui.cc

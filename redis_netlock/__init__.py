@@ -13,12 +13,19 @@ def dist_lock(key, client):
 
     try:
         t = _acquire_lock(key, client)
-        yield
+        yield t
     finally:
         _release_lock(key, client)
 
+def ask_lock(key,client):
+    key = 'lock_%s' % key
+    if client.get(key):
+        return True
+    else:
+        return False
+    
+
 def _acquire_lock(key, client):
-#    for i in xrange(0, DEFAULT_RETRIES):
     while 1:
         get_stored = client.get(key)
         if get_stored:
