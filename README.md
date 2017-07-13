@@ -1,4 +1,4 @@
-###一个用redis实现的分布式锁，含有retry和timetout的功能。
+### 一个用redis实现的分布式锁，含有retry和timetout的功能。
 
 * 用with做锁的逻辑语句
 * timeout避免了避免了任务出现异常，没有做delete操作
@@ -9,7 +9,7 @@
 
 ```
 #coding:utf-8
-#my blog: http://xiaorui.cc
+#blog: http://xiaorui.cc
 from __future__ import with_statement
 import redis
 import time
@@ -21,10 +21,11 @@ with dist_lock('test', client):
     print 'welcome to my blog, http://xiaorui.cc'
 
 ```
-#####同时运行test.py and test2.py
+
+##### 同时运行test.py and test2.py
 python test.py
 ```
-root@li568-252 redis_netlock]# python test.py
+[root@li568-252 redis_netlock]# python test.py
 welcome to my blog, http://xiaorui.cc
 ```
 
