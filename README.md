@@ -10,9 +10,11 @@
 ```
 #coding:utf-8
 #blog: http://xiaorui.cc
-from __future__ import with_statement
-import redis
+
 import time
+from __future__ import with_statement
+
+import redis
 from redis_netlock import dist_lock
 
 client = redis.Redis(connection_pool=redis.BlockingConnectionPool(max_connections=15, host='localhost', port=6379))
