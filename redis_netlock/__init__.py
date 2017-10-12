@@ -31,8 +31,7 @@ def _acquire_lock(key, client):
         if get_stored:
             time.sleep(0.03)
         else:
-            if client.setnx(key, 1):
-                client.expire(key,DEFAULT_EXPIRES)
+            if client.set(key, 1, ex=DEFAULT_EXPIRES, nx=True):
                 return True
     return False
 
