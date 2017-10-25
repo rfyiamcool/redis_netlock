@@ -28,7 +28,7 @@ with dist_lock('test', client):
 
 ```
 
-##### example:
+## example:
 
 同时运行test.py and test2.py
 
@@ -48,4 +48,5 @@ Sleeipng for 1.19347232007
 Sleeipng for 2.47668271021
 Sleeipng for 4.55280708824
 hello
+
 ```
